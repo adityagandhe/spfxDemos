@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/RaviTest",
+      "customActions": {
+        "cb9b9528-2443-4140-8bf9-b6514709f81f": {
+          "location": "ClientSideExtension.ListViewCommandSet",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible.",
+            "sampleTextThree": "This command is always visible. for the testing purpose"
+          }
+        }
+      }
+    },
+    "listViewCustomizer": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/RaviTest",
+      "customActions": {
+        "cb9b9528-2443-4140-8bf9-b6514709f81f": {
+          "location": "ClientSideExtension.ListViewCommandSet",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible.",
+            "sampleTextThree": "This command is always visible. for the testing purpose"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="RedirectDynamic"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="31e03c98-9db7-4599-a2ac-27e3fe5c082b"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>

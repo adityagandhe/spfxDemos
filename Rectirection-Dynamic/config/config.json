@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "redirect-dynamic-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/redirectDynamic/RedirectDynamicApplicationCustomizer.js",
+          "manifest": "./src/extensions/redirectDynamic/RedirectDynamicApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "RedirectDynamicApplicationCustomizerStrings": "lib/extensions/redirectDynamic/loc/{locale}.js"
+  }
+}

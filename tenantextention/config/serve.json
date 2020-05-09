@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/modernteam",
+      "customActions": {
+        "0fa9fd68-7a85-4693-8371-023dea79b472": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "Top": "Jai Ram Shri Ram Jai Jai Ram Jai Jai ram"
+          }
+        }
+      }
+    },
+    "tenantExtention": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/modernteam",
+      "customActions": {
+        "0fa9fd68-7a85-4693-8371-023dea79b472": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "Top": "Jai Ram Shri Ram Jai Jai Ram"
+          }
+        }
+      }
+    }
+  }
+}

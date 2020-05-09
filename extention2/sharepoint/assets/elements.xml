@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="DoubleExtention"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="620fb8e7-5615-4210-99c6-c314f92ea28d"
+        ClientSideComponentProperties="{&quot;Top&quot;:&quot;Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner.&quot;}">
+    </CustomAction>
+</Elements>

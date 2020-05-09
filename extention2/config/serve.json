@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "customActions": {
+        "620fb8e7-5615-4210-99c6-c314f92ea28d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message",
+            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+          }
+        }
+      }
+    },
+    "doubleExtention": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "customActions": {
+        "620fb8e7-5615-4210-99c6-c314f92ea28d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message",
+            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+          }
+        }
+      }
+    }
+  }
+}

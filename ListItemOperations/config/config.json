@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "list-item-operations-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/listItemOperations/ListItemOperationsWebPart.js",
+          "manifest": "./src/webparts/listItemOperations/ListItemOperationsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ListItemOperationsWebPartStrings": "lib/webparts/listItemOperations/loc/{locale}.js"
+  }
+}

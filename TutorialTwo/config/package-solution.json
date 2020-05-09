@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "tutorial-two-client-side-solution",
+    "id": "9fd14c49-99f2-4e04-ab3f-39e702b2720a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": true
+  },
+  "paths": {
+    "zippedPackage": "solution/tutorial-two.sppkg"
+  }
+}

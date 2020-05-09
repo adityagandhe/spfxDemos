@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tutorial-1-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tutorial1/Tutorial1WebPart.js",
+          "manifest": "./src/webparts/tutorial1/Tutorial1WebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "Tutorial1WebPartStrings": "lib/webparts/tutorial1/loc/{locale}.js"
+  }
+}

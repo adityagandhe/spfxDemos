@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/modernteam",
+      "customActions": {
+        "d486bfae-1a3b-4e3a-8ee3-fdf26196771d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message is checking",
+            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+          }
+        }
+      }
+    },
+    "redirect": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/modernteam",
+      "customActions": {
+        "d486bfae-1a3b-4e3a-8ee3-fdf26196771d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message",
+            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+          }
+        }
+      }
+    }
+  }
+}

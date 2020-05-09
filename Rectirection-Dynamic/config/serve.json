@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernTeam",
+      "customActions": {
+        "31e03c98-9db7-4599-a2ac-27e3fe5c082b": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "redirectDynamic": {
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernTeam",
+      "customActions": {
+        "31e03c98-9db7-4599-a2ac-27e3fe5c082b": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

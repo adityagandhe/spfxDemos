@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="Redirect"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="d486bfae-1a3b-4e3a-8ee3-fdf26196771d"
+        ClientSideComponentProperties="{&quot;Top&quot;:&quot;Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner.&quot;}">
+    </CustomAction>
+</Elements>

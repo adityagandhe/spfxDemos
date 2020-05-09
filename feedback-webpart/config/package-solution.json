@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Feedback Webpart On Page",
+    "id": "b5cf5e32-5031-4dba-a9e0-827a828333b0",
+    "version": "2.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/feedback-webpart.sppkg"
+  }
+}

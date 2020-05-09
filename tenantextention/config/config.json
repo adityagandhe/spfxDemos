@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tenant-extention-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/tenantExtention/TenantExtentionApplicationCustomizer.js",
+          "manifest": "./src/extensions/tenantExtention/TenantExtentionApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TenantExtentionApplicationCustomizerStrings": "lib/extensions/tenantExtention/loc/{locale}.js"
+  }
+}
