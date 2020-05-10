@@ -47,7 +47,7 @@ private getItems(currentURL:string):Promise<IListItems[]>{
   private renderPlaceHolders(): void {
     let topString="";
     let theme="";
-    let themeValue="";
+
     let currentUrl =this.context.pageContext.web.absoluteUrl;
 
 if(!this.BannerPlaceholder)
@@ -67,23 +67,25 @@ if(!this.BannerPlaceholder)
     Items.map(Item=>{
         topString= Item.Message;
         theme =Item.theme;
+        let themeValue="";
 
-        if (theme ="Dark")
+        if (theme ==="Dark")
         {
-          themeValue =`${styles.Dark}`;
+          themeValue =styles.Dark;
         }
         else{
-          themeValue =`${styles.Light}`;
+
+          themeValue =styles.Light;
         }
 
-        if (this.BannerPlaceholder.domElement ) {
+
           this.BannerPlaceholder.domElement.innerHTML = `
           <div class="${styles.app}">
             <div class="${themeValue}">
               ${topString}
             </div>
           </div>`;
-        }
+
         });
     });
 
