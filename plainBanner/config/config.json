@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "plain-banner-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/plainBanner/PlainBannerApplicationCustomizer.js",
+          "manifest": "./src/extensions/plainBanner/PlainBannerApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlainBannerApplicationCustomizerStrings": "lib/extensions/plainBanner/loc/{locale}.js"
+  }
+}

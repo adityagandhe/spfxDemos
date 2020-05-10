@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ClientSideComponentInstance
-        Title="DoubleExtention"
+        Title="PlainBanner"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ComponentId="620fb8e7-5615-4210-99c6-c314f92ea28d"
+        ComponentId="31a74607-337e-4c35-b9e1-30d900a4b1e1"
         Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </ClientSideComponentInstance>
 </Elements>

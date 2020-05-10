@@ -4,25 +4,24 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernCommunication",
       "customActions": {
         "620fb8e7-5615-4210-99c6-c314f92ea28d": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message",
-            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+            "testMessage": "Test message"
           }
         }
       }
     },
     "doubleExtention": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernCommunication",
       "customActions": {
         "620fb8e7-5615-4210-99c6-c314f92ea28d": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message",
-            "Top":"Top value test to check if banner can be applied.The banner would be applied on all the sites.This is second baner"
+            "testMessage": "Test message"
+
           }
         }
       }

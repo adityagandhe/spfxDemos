@@ -1,0 +1,29 @@
+
+
+.app {
+  .Light {
+      height:60px;
+      text-align:center;
+      line-height:2.5;
+      font-weight:bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(136, 167, 89);
+      color: black;
+
+  }
+
+  .Dark {
+    height:60px;
+    text-align:center;
+    line-height:2.5;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    color: whitesmoke;
+
+  }
+}

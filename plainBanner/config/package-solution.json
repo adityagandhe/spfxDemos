@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "extention-2-client-side-solution",
-    "id": "fa81d12b-c11f-4a31-8938-7f6516b7c13c",
+    "name": "et-top-string-this-is-default-value-client-side-solution",
+    "id": "fee881c7-ecab-430c-9287-62b01dd9ed6c",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
@@ -10,18 +10,18 @@
       {
         "title": "Application Extension - Deployment of custom action.",
         "description": "Deploys a custom action with ClientSideComponentId association",
-        "id": "b5c44ee9-568e-4d56-80d6-d43af98787c5",
+        "id": "aa7dcc71-a312-4852-ad88-ef36d6bd347f",
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
-            "elements.xml"
-
+            "elements.xml",
+            "ClientSideInstance.xml"
           ]
         }
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/extention-2Banner.sppkg"
+    "zippedPackage": "solution/et-top-string-this-is-default-value.sppkg"
   }
 }
