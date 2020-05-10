@@ -72,7 +72,7 @@ if(!this.BannerPlaceholder)
         {
           themeValue =`${styles.Dark}`;
         }
-        if (theme ="Light"){
+        else{
           themeValue =`${styles.Light}`;
         }
 
