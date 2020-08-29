@@ -19,9 +19,10 @@
     "group": { "default": "SharePoint Feedback Webpart" },
     "title": { "default": "Feedback to be entered" },
     "description": { "default": "Enter Feedback to be entered" },
-    "officeFabricIconFontName": "",
+    "officeFabricIconFontName": "NoteForward",
     "properties": {
-      "hintText": "Feed back test to be"
+      "hintText": "Feed back test to be",
+      "CommentBy":"The red lion of london"
     }
   }]
 }

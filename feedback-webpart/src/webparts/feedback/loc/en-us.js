@@ -2,6 +2,7 @@ define([], function() {
   return {
     "PropertyPaneDescription": "Upadate the properties",
     "BasicGroupName": "Fields",
-    "hintTextFieldLabel": "Hint text"
+    "hintTextFieldLabel": "Hint text value",
+    "CommentByFieldLabel":"Comment By?"
   }
 });

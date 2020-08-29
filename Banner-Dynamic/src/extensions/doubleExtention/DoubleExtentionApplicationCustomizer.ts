@@ -49,7 +49,7 @@ private getItems(currentURL:string):Promise<IListItems[]>{
     let theme="";
 
     let currentUrl =this.context.pageContext.web.absoluteUrl;
-
+alert(currentUrl);
 if(!this.BannerPlaceholder)
 {
 

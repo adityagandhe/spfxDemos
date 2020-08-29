@@ -17,7 +17,7 @@ export default class ListEventsWebPart extends BaseClientSideWebPart <IListEvent
 
   private createList():void
   {
-this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl +"/_api/web/lists/GetByTitle('Teest')", SPHttpClient.configurations.v1)
+this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl +"/_api/web/lists/GetByTitle('Teestrt123')", SPHttpClient.configurations.v1)
 .then((data: SPHttpClientResponse) =>{
   if(data.status === 200)
   {
@@ -29,7 +29,7 @@ this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl +"/_api/w
     alert("list do not exists") ;
 
   const listdefn :any ={
-    "Title":"Teest",
+    "Title":"Teestrt123",
      "Description":"New List",
      "AllowContentTypes":true,
      "BaseTemplate":100,

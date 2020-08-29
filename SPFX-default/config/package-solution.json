@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-listview&corousal-react-client-side-solution",
+    "id": "b3913e69-9967-4f07-9ff7-0a729de54b82",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-listview&corousal-react.sppkg"
+  }
+}

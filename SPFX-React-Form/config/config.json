@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-react-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfxReactForm/SpfxReactFormWebPart.js",
+          "manifest": "./src/webparts/spfxReactForm/SpfxReactFormWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxReactFormWebPartStrings": "lib/webparts/spfxReactForm/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

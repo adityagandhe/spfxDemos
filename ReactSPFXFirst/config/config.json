@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "react-spfx-todo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reactSpfxTodo/ReactSpfxTodoWebPart.js",
+          "manifest": "./src/webparts/reactSpfxTodo/ReactSpfxTodoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": { "jquery": {
+    "path": "node_modules/jquery/dist/jquery.min.js",
+    "globalName": "jQuery"
+  },"bootstrap": {
+    "path": "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "globalName": "jQuery"
+  }},
+  "localizedResources": {
+    "ReactSpfxTodoWebPartStrings": "lib/webparts/reactSpfxTodo/loc/{locale}.js"
+  }
+
+}

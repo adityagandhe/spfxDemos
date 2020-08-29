@@ -14,6 +14,7 @@ import * as strings from 'FeedbackWebPartStrings';
 
 export interface IFeedbackWebPartProps {
   hintText: string;
+  CommentBy:string;
 }
 
 export default class FeedbackWebPart extends BaseClientSideWebPart<IFeedbackWebPartProps> {
@@ -23,7 +24,7 @@ export default class FeedbackWebPart extends BaseClientSideWebPart<IFeedbackWebP
     this.domElement.innerHTML = `
       <div class="${ styles.feedback }">
       <i class="ms-Icon ms-Icon--NoteForward" aria-hidden="true"></i>
-<input type='text' class ="${styles.input}" maxlength ='255'  placeholder ="${escape(this.properties.hintText)}"/>
+<input type='text' class ="${styles.input}" maxlength ='255'   placeholder ="${escape(this.properties.CommentBy)}"/>
 <button class ="${styles.button}" ><span class="ms-Button-label">Send Data </span>    </button>
 <p class="${styles.successIndicator}"></p>
 </div>`;
@@ -50,7 +51,8 @@ private sendFeedback(event:Event):void
   paragraphElement.innerHTML ="";
   if(this._commentText ===undefined || this._commentText.length ===0)
   {
-    this.context.statusRenderer.renderError(paragraphElement,"Please Enter Value") ;
+    this.context.statusRenderer.displayLoadingIndicator(paragraphElement,"Please Enter Value",10);
+    //this.context.statusRenderer.renderError(paragraphElement,"Please Enter Value") ;
     return;
   }
   if(Environment.type == EnvironmentType.Local)
@@ -100,6 +102,9 @@ else{
               groupFields: [
                 PropertyPaneTextField('hintText', {
                   label: strings.hintTextFieldLabel
+                }),
+                PropertyPaneTextField('CommentBy', {
+                  label: strings.CommentByFieldLabel
                 })
               ]
             }
