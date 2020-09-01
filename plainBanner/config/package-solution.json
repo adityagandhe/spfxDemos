@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "et-top-string-this-is-default-value-client-side-solution",
+    "name": "StaticBanner-ClientSideSolution",
     "id": "fee881c7-ecab-430c-9287-62b01dd9ed6c",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -22,6 +22,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/et-top-string-this-is-default-value.sppkg"
+    "zippedPackage": "StaticBanner-ClientSideSolution.sppkg"
   }
 }

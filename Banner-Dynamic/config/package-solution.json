@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "DynamicBanner-2-client-side-solution",
+    "name": "DynamicBanner-client-side-solution",
     "id": "fa81d12b-c11f-4a31-8938-7f6516b7c13c",
-    "version": "1.0.0.1",
+    "version": "2.0.0.2",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "features": [
@@ -22,6 +22,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/DynamicBanner.sppkg"
+    "zippedPackage": "solution/DynamicBannerClientSideSolution.sppkg"
   }
 }

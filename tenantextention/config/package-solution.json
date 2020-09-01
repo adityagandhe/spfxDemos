@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "tenantextention-client-side-solution",
+    "name": "StaticBanner-client-side-solution",
     "id": "84c700ca-96a2-47c5-910a-ed01cdbd527d",
     "version": "1.0.0.2",
     "includeClientSideAssets": true,
@@ -15,14 +15,14 @@
         "version": "1.0.0.2",
         "assets": {
           "elementManifests": [
-            "elements.xml",
-            "ClientSideInstance.xml"
+         "elements.xml",
+        "ClientSideInstance.xml"
           ]
         }
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/tenantextention.sppkg"
+    "zippedPackage": "solution/staticbanner.sppkg"
   }
 }

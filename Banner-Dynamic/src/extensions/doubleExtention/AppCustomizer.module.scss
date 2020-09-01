@@ -1,7 +1,7 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
 .app {
-  .Light {
+  .Planned {
       height:50px;
       text-align:center;
       line-height:2.5;
@@ -9,12 +9,14 @@
 
       align-items: center;
       justify-content: center;
-      background-color:yellow;
+      background-color:skyblue;
       color: black;
-
+      border-style: solid;
+      border-color: black;
+      border-width: thin;
   }
 
-  .Dark {
+  .InProgress {
     height:50px;
     text-align:center;
     line-height:2.5;
@@ -22,8 +24,25 @@
 
     align-items: center;
     justify-content: center;
-    background-color:black;
-    color: $ms-color-white;
+    background-color:yellow;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+  }
 
+  .Hypercare {
+    height:50px;
+    text-align:center;
+    line-height:2.5;
+    font-weight:bold;
+
+    align-items: center;
+    justify-content: center;
+    background-color:green;
+    color: $ms-color-white;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
   }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ClientSideComponentInstance
-        Title="TenantExtention"
+        Title="BannerTenantExtention"
         Location="ClientSideExtension.ApplicationCustomizer"
         ComponentId="0fa9fd68-7a85-4693-8371-023dea79b472"
         Properties="{&quot;Top&quot;:&quot;Jai Ram Shri Ram Jai Jai Ram Jai Ram Shri Ram Jai Jai Ram Jai Ram Shri Ram Jai Jai Ram Jai Ram Shri Ram Jai Jai Ram  &quot;}">
