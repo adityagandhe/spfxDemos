@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://yavatmal3.sharepoint.com/sites/RaviTest/test",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/test&test/test",
       "customActions": {
         "31a74607-337e-4c35-b9e1-30d900a4b1e1": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -16,7 +16,7 @@
       }
     },
     "plainBanner": {
-      "pageUrl": "https://yavatmal3.sharepoint.com/sites/RaviTest/test",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/test&test/test",
       "customActions": {
         "31a74607-337e-4c35-b9e1-30d900a4b1e1": {
           "location": "ClientSideExtension.ApplicationCustomizer",

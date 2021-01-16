@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "fluent-spfxwebpart-client-side-solution",
+    "id": "68fbeea2-5b10-4a2a-9b72-04be68609853",
+    "version": "2.0.0.1",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": true,
+    "features": [{
+      "title": "fluent-spfxwebpart-client-side-solution",
+      "description": "fluent-spfxwebpart-client-side-solution",
+      "id": "aba8b98c-199d-4c4d-bedf-da377cfee7c6",
+      "version": "2.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/fluent-spfxwebpart.sppkg"
+  }
+}

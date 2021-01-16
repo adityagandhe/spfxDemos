@@ -22,7 +22,8 @@
     "officeFabricIconFontName": "NoteForward",
     "properties": {
       "hintText": "Feed back test to be",
-      "CommentBy":"The red lion of london"
+      "CommentBy":"The red lion",
+      "DateofComment":"test"
     }
   }]
 }

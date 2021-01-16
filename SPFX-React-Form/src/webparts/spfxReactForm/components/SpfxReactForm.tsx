@@ -231,6 +231,7 @@ public element:JSX.Element[] |JSX.Element;
     let getSelectedUsers: string[] = [];
 
     for (let item in items) {
+      alert(JSON.stringify(items[item]));
       getSelectedUsers.push(items[item].id);
     }
 

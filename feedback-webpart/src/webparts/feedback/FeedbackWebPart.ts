@@ -15,6 +15,7 @@ import * as strings from 'FeedbackWebPartStrings';
 export interface IFeedbackWebPartProps {
   hintText: string;
   CommentBy:string;
+  DateofComment:string;
 }
 
 export default class FeedbackWebPart extends BaseClientSideWebPart<IFeedbackWebPartProps> {
@@ -61,11 +62,14 @@ private sendFeedback(event:Event):void
     return;
   }
  // alert(this._commentText ) ;
+
+
  const url :string =this.context.pageContext.web.absoluteUrl + "/_api/Web/Lists/getbytitle('feedback')/items" ;
  const items:any ={
    "Title" :this._commentText
 
  } ;
+
 
  const spHttpClientOptions:ISPHttpClientOptions =
  {
@@ -105,6 +109,9 @@ else{
                 }),
                 PropertyPaneTextField('CommentBy', {
                   label: strings.CommentByFieldLabel
+                }),
+                PropertyPaneTextField('DateofComment', {
+                  label: strings.DateFieldLabel
                 })
               ]
             }

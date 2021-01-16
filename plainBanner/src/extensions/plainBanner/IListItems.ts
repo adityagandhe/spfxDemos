@@ -3,5 +3,5 @@ Title:string;
 Message:string;
 ShowBanner:string;
 theme:string;
-
+Target:string;
 }

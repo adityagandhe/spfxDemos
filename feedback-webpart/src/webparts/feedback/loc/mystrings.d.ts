@@ -3,6 +3,7 @@ declare interface IFeedbackWebPartStrings {
   BasicGroupName: string;
   hintTextFieldLabel: string;
   CommentByFieldLabel:string;
+  DateFieldLabel:string;
 }
 
 declare module 'FeedbackWebPartStrings' {

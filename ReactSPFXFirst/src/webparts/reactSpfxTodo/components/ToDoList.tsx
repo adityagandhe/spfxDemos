@@ -180,6 +180,7 @@ export default class extends React.Component<IProps, IState> {
   public render(): React.ReactElement<IProps> {
     return (
       <div>
+        <Icon iconName="CompassNW" />
         <TextField
           className=""
           label="Add item"

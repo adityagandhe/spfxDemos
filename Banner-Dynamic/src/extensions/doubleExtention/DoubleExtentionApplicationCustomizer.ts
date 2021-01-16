@@ -38,10 +38,13 @@ export default class DoubleExtentionApplicationCustomizer
 private getItems(currentURL:string):Promise<IListItems[]>{
 
   const urlValue:string= "https://yavatmal3.sharepoint.com/sites/ModernTeam/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Message,ShowBanner,theme&$top 1&$filter=ShowBanner eq 1 and Title eq '"+currentURL+"'";
- return this.context.spHttpClient.get(urlValue, SPHttpClient.configurations.v1)
+ alert(urlValue);
+  return this.context.spHttpClient.get(urlValue, SPHttpClient.configurations.v1)
 .then((data: SPHttpClientResponse) => data.json())
 .then((data: any) => {
+  console.log(JSON.parse(data));
   return data.value;
+
 });
 }
 private SetRedirect(currentURL:string):Promise<IListItems[]>{
@@ -60,7 +63,14 @@ private SetRedirect(currentURL:string):Promise<IListItems[]>{
     let theme="";
 
     let currentUrl =this.context.pageContext.web.absoluteUrl;
-//alert(currentUrl);
+alert(currentUrl);
+
+if(currentUrl.indexOf('&')>0)
+{
+  alert("and is present");
+ currentUrl= encodeURIComponent(currentUrl);
+ alert(currentUrl);
+}
 if(!this.BannerPlaceholder)
 {
 
@@ -83,9 +93,12 @@ if(!this.BannerPlaceholder)
 
 
 });
+
+
     this.getItems(currentUrl).then(Items=>{
     Items.map(Item=>{
         topString= Item.Message;
+        alert("value"+ topString);
         theme =Item.theme;
         let themeValue="";
 

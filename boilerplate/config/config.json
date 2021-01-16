@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "boilerplate-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/boilerplate/BoilerplateWebPart.js",
+          "manifest": "./src/webparts/boilerplate/BoilerplateWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BoilerplateWebPartStrings": "lib/webparts/boilerplate/loc/{locale}.js"
+  }
+}

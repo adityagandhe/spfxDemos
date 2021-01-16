@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-feedback-webpart-client-side-solution",
+    "id": "352bc118-ef8a-4fac-8968-bd78e91a689b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/react-feedback-webpart.sppkg"
+  }
+}

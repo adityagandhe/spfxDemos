@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernCommunication",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/test&test",
       "customActions": {
         "620fb8e7-5615-4210-99c6-c314f92ea28d": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "doubleExtention": {
-      "pageUrl": "https://yavatmal3.sharepoint.com/sites/ModernCommunication",
+      "pageUrl": "https://yavatmal3.sharepoint.com/sites/test&test",
       "customActions": {
         "620fb8e7-5615-4210-99c6-c314f92ea28d": {
           "location": "ClientSideExtension.ApplicationCustomizer",

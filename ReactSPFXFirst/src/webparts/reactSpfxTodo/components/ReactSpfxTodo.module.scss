@@ -1,14 +1,18 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
 .reactSpfxTodo {
   .para {
-   background-color: seagreen !important;
+   background-color:$ms-color-sharedRed20 !important;
+
    color:red !important;
    margin: 0px auto;
    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
   }
 
   .container {
+    background-color: $ms-color-sharedRed20;
     max-width: 700px;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
@@ -45,6 +49,7 @@
     color: green;
     background-color: hotpink;
     width: fit-content;
+    @include ms-depth-8;
   }
 
   .description {

@@ -34,9 +34,11 @@ export default class PlainBannerApplicationCustomizer
 
     return Promise.resolve();
   }
+
   private getItems(currentURL:string):Promise<IListItems[]>{
-    const urlValue:string= "https://yavatmal3.sharepoint.com/sites/ModernTeam/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Message,ShowBanner,theme&$top 1&$filter=ShowBanner eq 1 and Title eq '"+currentURL+"'";
-   return this.context.spHttpClient.get(urlValue, SPHttpClient.configurations.v1)
+    const urlValue:string= "https://yavatmal3.sharepoint.com/sites/ModernTeam/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Message,ShowBanner,Target,theme&$top 1&$filter=ShowBanner eq 1 and Title eq '"+currentURL+"'";
+     alert(urlValue);
+    return this.context.spHttpClient.get(urlValue, SPHttpClient.configurations.v1)
   .then((data: SPHttpClientResponse) => data.json())
   .then((data: any) => {
     return data.value;
@@ -62,8 +64,25 @@ export default class PlainBannerApplicationCustomizer
       let themeValue="";
       let currentUrl =this.context.pageContext.web.absoluteUrl;
 
+      if(currentUrl.indexOf('&')>0)
+      {
+        alert("and is present");
+       currentUrl= encodeURIComponent(currentUrl);
+       alert(currentUrl);
+      }
 
       this.getItems(currentUrl).then(Items=>{
+        let targetvalue:string="";
+        Items.map(Item=>{targetvalue = Item.Target;
+          alert(targetvalue);
+    //window.location.replace
+          location.href =targetvalue;
+        });
+      });
+    }
+  }
+}
+   /*   this.getItems(currentUrl).then(Items=>{
         Items.map(Item=>{
             topString= Item.Message;
             alert("topstring"+topString) ;
@@ -85,11 +104,4 @@ export default class PlainBannerApplicationCustomizer
               </div>`;
             }
             });
-        });
-
-
-      }
-    }
-
-
-  }
+        });*/
