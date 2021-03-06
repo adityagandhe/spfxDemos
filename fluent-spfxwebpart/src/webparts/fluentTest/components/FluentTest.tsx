@@ -14,6 +14,7 @@ import {ServiceClass} from "./Services/Services";
 import Pnpexamples from "./PNPExamples/pnpexamples";
 import PNPGrid from "./PNPGrid/PNPGrid";
 import PnpForm from "./FormComponent/pnpForm";
+import GraphGrid from "./MSGraph/GraphGrid";
 export default class FluentTest extends React.Component<IFluentTestProps, {}> {
   public IconClick=()=>{
     alert("Ïcon is clicked");
@@ -23,9 +24,11 @@ export default class FluentTest extends React.Component<IFluentTestProps, {}> {
     return (
 
       <div className="ms-Grid">
-        <PNPGrid context={this.props.context}></PNPGrid>
-        <PnpForm description={this.props.description} context={this.props.context} Weburl={this.props.Weburl}></PnpForm>
-        {/*  <Pnpexamples context={this.props.context}></Pnpexamples>
+        <GraphGrid description={this.props.description} context={this.props.context}></GraphGrid>
+        {/*  <PnpForm description={this.props.description} context={this.props.context} Weburl={this.props.Weburl}></PnpForm>
+        {/* <PNPGrid context={this.props.context}></PNPGrid>
+
+        <Pnpexamples context={this.props.context}></Pnpexamples>
        <GridState context={this.props.context} ></GridState>
 <Form description={this.props.description} context={this.props.context} Weburl={this.props.Weburl}></Form>
    <div className="ms-Grid-row">

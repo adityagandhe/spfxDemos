@@ -50,6 +50,9 @@ export default class Component extends React.Component<IComponentProps, ICompone
   public spOps:ServiceClass;
   constructor(props: IComponentProps) {
     super(props);
+    sp.setup({
+      spfxContext: this.props.context
+    });
 this.spOps =new ServiceClass();
     this.state = {
 
@@ -224,6 +227,32 @@ Metadata:terms,
   });
 
 }
+public savedata=(values)=>{
+  let isDataValidated:boolean=true;
+
+  if(values.Metadata =="")
+  {
+    alert("metadata is null");
+    isDataValidated=false;
+    document.getElementById('metadataValidation').setAttribute("style","display:block !important");
+  }
+
+//alert("Save button is clicked"+values.Title);
+  if(values.Title ==null)
+  {
+    alert("called in exception");
+    isDataValidated=false;
+    document.getElementById('titleValidation').setAttribute("style","display:block !important");
+  }
+
+  if(isDataValidated)
+{
+  this.spOps.PNPCreateListItem(values,this.MultiTextValue).then(Item=>{
+    alert("New item is created:"+JSON.stringify(Item.Id));
+
+});
+}
+}
   public render(): React.ReactElement<IComponentProps> {
     const {Title,multiline,Yes,Date,user,choice,Metadata}=this.state;
     const values={Title,multiline,Yes,Date,user,choice,Metadata};
@@ -240,8 +269,9 @@ This is the form component {this.props.description}
             <div className="ms-Grid-row">
                 <div className="ms-Grid-col ms-sm6 ms-md4 ms-lg4">
                   <Label className={styles.subTitle} defaultValue="Title">
-                    Title
+                    Title *
                   </Label>
+                  <span id="titleValidation" className={styles.validationerror}>The Field requires value</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                   <TextField
@@ -256,8 +286,9 @@ This is the form component {this.props.description}
               <div className="ms-Grid-row">
                 <div className="ms-Grid-col ms-sm6 ms-md4 ms-lg4">
                   <Label className={styles.subTitle} defaultValue="Title">
-                    Multiline
+                    Multiline *
                   </Label>
+
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                   <TextField
@@ -278,6 +309,7 @@ This is the form component {this.props.description}
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                 <RichText value={this.state.multilinrrich}
           onChange={(text)=>this.onRichTextChange(text)}
+
 />
                 </div>
               </div>
@@ -286,6 +318,7 @@ This is the form component {this.props.description}
                   <Label className={styles.subTitle} defaultValue="Title">
                     Yes/No
                   </Label>
+                  <span>*</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                 <Toggle
@@ -302,6 +335,7 @@ This is the form component {this.props.description}
                   <Label className={styles.subTitle} defaultValue="Title">
                   lookup
                   </Label>
+                  <span>*</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                 <FieldLookupRenderer lookups={this.state.lookupId}
@@ -316,6 +350,7 @@ This is the form component {this.props.description}
                   <Label className={styles.subTitle} defaultValue="Title">
                   Date
                   </Label>
+                  <span>*</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                 <DatePicker
@@ -324,6 +359,7 @@ This is the form component {this.props.description}
                     defaultValue={this.state.Date}
                     onSelectDate={this.DateChange}
                     value={this.state.Date}
+
                   ></DatePicker>
 
                 </div>
@@ -331,8 +367,9 @@ This is the form component {this.props.description}
  <div className="ms-Grid-row">
                 <div className="ms-Grid-col ms-sm6 ms-md4 ms-lg4">
                   <Label className={styles.subTitle} defaultValue="Title">
-                  Metadata
+                  Metadata *
                   </Label>
+                  <span id="metadataValidation" className={styles.validationerror}>The Field requires value</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
                 <TaxonomyPicker allowMultipleSelections={false}
@@ -341,7 +378,8 @@ This is the form component {this.props.description}
                 label="Taxonomy Picker"
                 context={this.props.context}
                 onChange={this.onTaxPickerChange}
-                isTermSetSelectable={true} />
+                isTermSetSelectable={true}
+                />
 
                 </div>
               </div>
@@ -350,6 +388,7 @@ This is the form component {this.props.description}
                   <Label className={styles.subTitle} defaultValue="Title">
                   Users
                   </Label>
+                  <span>*</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
 
@@ -366,7 +405,7 @@ This is the form component {this.props.description}
                       resolveDelay={1000}
 defaultSelectedUsers={ this.state.LoggedInUserPPDefaultItems
 }
-
+required={true}
                     />
                 </div>
                 <div className="ms-Grid-row">
@@ -374,6 +413,7 @@ defaultSelectedUsers={ this.state.LoggedInUserPPDefaultItems
                   <Label className={styles.subTitle} defaultValue="Title">
                   Choices
                   </Label>
+                  <span>*</span>
                 </div>
                 <div className="ms-Grid-col ms-sm6 ms-md8 ms-lg8">
 
@@ -387,7 +427,7 @@ defaultSelectedUsers={ this.state.LoggedInUserPPDefaultItems
 
                 </div>
                 </div>
-                <button onClick={()=>this.spOps.PNPCreateListItem(values,this.MultiTextValue)}>Save Data PNP</button>
+                <button onClick={()=>this.savedata(values)}>Save Data PNP</button>
                 <button onClick={()=>this.spOps.PNPCreateListItem(values,this.MultiTextValue)}>Update item PNP</button>
                 <button onClick={()=>this.spOps.PNPCreateListItem(values,this.MultiTextValue)}>Delete item PNP</button>
               </div>

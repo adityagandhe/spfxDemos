@@ -1,33 +1,19 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
-@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
-@import '~office-ui-fabric-core/dist/sass/References';
 
-.fluentTest {
-  :global{
-    .pickedTermText_a9d889b0{
-  color: black;
-    }
-  }
+.globalSpfx {
   .container {
     max-width: 700px;
-     margin: 0px auto;
+    margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-
-
   }
 
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;
-    background-color:#b4009e !important;
+    background-color: $ms-color-themeDark;
     padding: 20px;
-
   }
-.validationerror
-{
-  font-style: italic;
-  display: none;
-}
+
   .column {
     @include ms-Grid-col;
     @include ms-lg10;
@@ -37,30 +23,18 @@
   }
 
   .title {
-    @include ms-font-xxl;
-    @include ms-fontColor-red;
-    @include ms-fontWeight-bold;
-    @include ms-depth-8;
+    @include ms-font-xl;
+    @include ms-fontColor-white;
   }
 
   .subTitle {
-    @include ms-fontSize-16;
-   color: #6bb700;
-   @include ms-bgColor-sharedRed20;
-font-family: $ms-font-family-arabic;
+    @include ms-font-l;
+    @include ms-fontColor-white;
   }
 
   .description {
     @include ms-font-l;
     @include ms-fontColor-white;
-  }
- .iconClass{
-
-    height: 50;
-  color:$ms-color-sharedRed20;
-    width: 50;
-    margin: '0 25px';
-
   }
 
   .button {
@@ -96,7 +70,5 @@ font-family: $ms-font-family-arabic;
       vertical-align: top;
       display: inline-block;
     }
-
-
   }
 }

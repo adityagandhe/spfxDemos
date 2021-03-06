@@ -3,10 +3,16 @@
   "solution": {
     "name": "fluent-spfxwebpart-client-side-solution",
     "id": "68fbeea2-5b10-4a2a-9b72-04be68609853",
-    "version": "2.0.0.1",
+    "version": "2.0.0.6",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": false,
     "isDomainIsolated": true,
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadBasic.All"
+      }
+    ],
     "features": [{
       "title": "fluent-spfxwebpart-client-side-solution",
       "description": "fluent-spfxwebpart-client-side-solution",

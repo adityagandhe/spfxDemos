@@ -3,33 +3,36 @@ import {
   SPHttpClientResponse,
   ISPHttpClientOptions,
 } from "@microsoft/sp-http";
-import { sp, List } from "@pnp/sp/presets/all";
-import "@pnp/sp/webs";
-import "@pnp/sp/lists";
+import { sp, List, PermissionKind } from "@pnp/sp/presets/all";
 import { IListUpdateResult, ICamlQuery } from "@pnp/sp/lists";
 export class ServiceClass {
   public async PNPGetItem(Id){
     alert(" pnp get item is called with async");
     let item= await sp.web.lists.getByTitle("0").items.getById(Id).get();
+
     console.log(item);
     return item;
   }
   public async PNPCreateListItem(values,MultiTextValue){
 
     try{
-      alert("Create Item null");
 
-    let newItem = await sp.web.lists.getByTitle('0').items.add({Title:values.Title,multiline:values.multiline,multilinrrich:MultiTextValue,Yes:values.Yes,Date:values.Date,choice:values.choice,lookupId:1,userId:{results:values.user},  Metadata: {
-      "__metadata": { "type": "SP.Taxonomy.TaxonomyFieldValue" },
-      "Label":values.Metadata[0].name,
-      'TermGuid':values.Metadata[0].key ,
-      'WssId': '-1',
-    }});
+     alert("Create Item item TITLE"+JSON.stringify(values.Title));
+
+    let newItem = await sp.web.lists.getByTitle('0').items.add({Title:values.Title,  multiline:values.multiline,multilinrrich:MultiTextValue,Yes:values.Yes,Date:values.Date,choice:values.choice,
+userId:{results:values.user},Metadata: {
+    "__metadata": { "type": "SP.Taxonomy.TaxonomyFieldValue" },
+     "Label":values.Metadata[0].name,
+    'TermGuid':values.Metadata[0].key ,
+     'WssId': '-1',
+  }});
     let id = await newItem.item.select("Id")();
-    alert("new list is created " + JSON.stringify(id));
+   // alert("new list is created " + JSON.stringify(id));
+   return id;
   }
     catch{
       alert("error in saving item");
+     return 0;
     }
 
   }
