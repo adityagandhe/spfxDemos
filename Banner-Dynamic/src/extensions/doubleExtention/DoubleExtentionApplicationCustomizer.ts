@@ -37,7 +37,7 @@ export default class DoubleExtentionApplicationCustomizer
 
 private getItems(currentURL:string):Promise<IListItems[]>{
 
-  const urlValue:string= "https://yavatmal3.sharepoint.com/sites/ModernTeam/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Message,ShowBanner,theme&$top 1&$filter=ShowBanner eq 1 and Title eq '"+currentURL+"'";
+  const urlValue:string= "/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Message,ShowBanner,theme&$top 1&$filter=ShowBanner eq 1 and Title eq '"+currentURL+"'";
  alert(urlValue);
   return this.context.spHttpClient.get(urlValue, SPHttpClient.configurations.v1)
 .then((data: SPHttpClientResponse) => data.json())
@@ -50,7 +50,7 @@ private getItems(currentURL:string):Promise<IListItems[]>{
 private SetRedirect(currentURL:string):Promise<IListItems[]>{
 
 
-  const url:string="https://yavatmal3.sharepoint.com/sites/ModernTeam/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Target,ApplyRedirection&$top 1&$filter=ApplyRedirection eq 1 and Title eq '"+currentURL+"'";
+  const url:string="/_api/Web/Lists/getbytitle('Banner')/items?$Select=Title,Target,ApplyRedirection&$top 1&$filter=ApplyRedirection eq 1 and Title eq '"+currentURL+"'";
       return this.context.spHttpClient.get(url, SPHttpClient.configurations.v1)
       .then((data: SPHttpClientResponse) => data.json())
       .then((data: any) => {
