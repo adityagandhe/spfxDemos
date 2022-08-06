@@ -61,9 +61,24 @@ private SetRedirect(currentURL:string):Promise<IListItems[]>{
   private renderPlaceHolders(): void {
     let topString="";
     let theme="";
-
-    let currentUrl =this.context.pageContext.web.absoluteUrl;
+    let currentUrl =window.location.href;
+    //let currentUrl =this.context.pageContext.site.absoluteUrl;
 alert(currentUrl);
+let folderpath="https://yavatmal3.sharepoint.com/sites/ModernTeam/Shared%20Documents/Forms/AllItems.aspx?viewid=10b25152%2D34dc%2D4c2a%2Da9c4%2Dcc3b2875ad6e&id=%2Fsites%2FModernTeam%2FShared%20Documents%2FGeneral";
+//if(currentUrl.search(folderpath) == -1)
+if(currentUrl.indexOf(folderpath) == -1)
+{
+  alert("It is outside");
+
+}
+else{
+
+  alert("ït is in the  general folder");
+  let currentuser= this.context.pageContext.user.email;
+alert("current usr"+currentuser);
+}
+
+
 
 if(currentUrl.indexOf('&')>0)
 {

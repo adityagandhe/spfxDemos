@@ -53,7 +53,8 @@ return this.context.spHttpClient.get(url, SPHttpClient.configurations.v1)
 });
 }
 private CreateList(): void{
-  alert("Creating the list");
+  alert("Creating the list"+ this.properties.description);
+
   const listdefn :any ={
     "Title":this.properties.description,
      "Description":"New List",
